@@ -24,10 +24,14 @@ public class HarshadNudeZuckerman
 		}
 		System.out.println();
 		for(int xx=1; xx <= 25 ; xx++)
-		{			
-			if(calcNude(xx)&&calcHarshad(xx)&&calcZuckerman(xx) == true)
+		{	
+			bool nude = calcNude(xx);
+			bool harshad = calcHarshad(xx);
+			bool zuckerman = calcZuckerman(xx);
+			
+			if(nude && harshad && zuckerman == true)
 			{
-				System.out.print(xx+",");
+				System.out.print(xx + ",");
 			}     
 		}
 	}
