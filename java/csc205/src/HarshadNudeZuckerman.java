@@ -16,22 +16,16 @@ public class HarshadNudeZuckerman
 		
 	public static void main (String[] args)
     { 	
-		String str1 = (de+" "+ad+" "+"and"+" "+an+" Numbers\n");
-		System.out.print(str1);
-		for(int l=2; l <= str1.length(); l++)
-		{
-			System.out.print("=");			
-		}
-		System.out.println();
 		for(int xx=1; xx <= 25 ; xx++)
-		{			
-
-		{				
-			if( calcNude(xx)&&calcHarshad(xx)&&calcZuckerman(xx) == true)
+		{	
+			boolean nude = calcNude(xx);
+			boolean harshad = calcHarshad(xx);
+			boolean zuckerman = calcZuckerman(xx);
+			
+			if(nude && harshad && zuckerman == true)
 			{
 				System.out.print(xx + ",");
-			}
-		  }	
+			}		  
 		}
 	}
 	
@@ -98,6 +92,17 @@ public class HarshadNudeZuckerman
 	    }
         return cc;
     }
+	
+	/*public static boolean displayTitle(int xx)
+	{
+		String str1 = (de+" "+ad+" "+"and"+" "+an+" Numbers\n");
+		System.out.print(str1);
+		for(int l=2; l <= str1.length(); l++)
+		{
+			System.out.print("=");			
+		}
+		System.out.println();
+	}*/
 
 
     }
