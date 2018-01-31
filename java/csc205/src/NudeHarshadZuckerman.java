@@ -1,15 +1,15 @@
-/* * * * * * * * * * * * * * * * * * * * * * *
- * #NudeHarshadZuckerman                     *
- * mad props to the                          *
- * @creator: Tony Demyan                     *
- * @created: 02018/01/28/                    *
- * @course: csc205                           *
- * @url: demyans.com                         *
- * This is a program that evaluates numbers  *
- * Short.[MIN - MAX Value] and prints numbers* 
- * that fall within the Nude, Harshad,       *            
- * and Zuckerman number sets.                *
- * * * * * * * * * * * * * * * * * * * * * * *
+/* x x x x x x x x x x x x x x x x x x x x x x x 
+ x #NudeHarshadZuckerman                       x
+ x mad props to the                            x
+ x @creator: Tony Demyan                       x
+ x @created: 02018.01.28/                      x
+ x @course: csc205                             x
+ x @url: demyans.com                           x
+ x This is a program that evaluates numbers    x
+ x Short.[MIN - MAX Value] and prints numbers  x 
+ x that fall within the Nude, Harshad,         x            
+ x and Zuckerman number sets.                  x
+ x x x x x x x x x x x x x x x x x x x x x x x x
  */
 
 public class NudeHarshadZuckerman {
