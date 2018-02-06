@@ -6,8 +6,8 @@ import java.util.*;
  * An array in ascending order is left unchanged.
  * An array in descending order is reversed.
  *
- * @creator gdt
- * @created 02017.12.15
+ * @creator td
+ * @created 02018.01.31
  * @assignment  implement the checkIfSorted() 
  *              and reverseArray() methods
  */
@@ -51,24 +51,40 @@ public class ArrayPlay {
    }
 
 private static int checkIfSorted(int[] data) {
-	
-   boolean isAscending = data[1] > data[0];
-      
-   if(isAscending) {
-      for (int i = 0; i < data.length-1; i++) {
-         if(data[i] > data[i+1]) {
+	      
+    // clear out equal entries from the beginning
+    int i = 1;
+    while (i < data.length && data[i - 1] == data[i]) {
+        i++;
+    }
+
+    // if there are no entries left, then it is nonincreasing and nondecreasing
+    //if (i>= data.length) {
+    //    return;
+    //}
+
+    int previous = data[i - 1];
+    if (i < data.length && previous > data[i]) {
+        for (; i < data.length; i++) {
+            if (previous < data[i]) {
+                return UNSORTED;
+            }
+
+            previous = data[i];
+        }
+
+        return DESCENDING;
+    }
+
+    for (; i < data.length; i++) {
+        if (previous > data[i]) {
             return UNSORTED;
-         }
-         return ASCENDING;
-      }
-    }else {//descending
-        for (int i = 0; i < data.length-1; i++) {
-           if(data[i] < data[i+1]) {
-              return UNSORTED;                
-           }
-           return DESCENDING;
-        }  
-      }
+        }
+
+        previous = data[i];
+    }
+
+    return ASCENDING;
 }
 
 
@@ -105,6 +121,7 @@ private static void printArray(int[] x, boolean nl) {
     * @return UNSORTED or ASCENDING or DESCENDING
     */
    private ArrayPlay(int[] data) {
+	   return;
    }
 
 }
