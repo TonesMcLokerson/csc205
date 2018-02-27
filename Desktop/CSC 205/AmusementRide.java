@@ -8,7 +8,7 @@ import java.util.*;
  * defined at the bottom of the class.
  *
  * @creator tmd
- * @created 02018.02.20
+ * @created 02018.02.27
  */
 
 public abstract class AmusementRide extends Object {
@@ -104,12 +104,7 @@ public abstract class AmusementRide extends Object {
    */
   public static void main(String[] argv) {
 
-    /*FerrisWheel f = new FerrisWheel("The Billy Preston", 50, 6.28, 100);
-    RollerCoaster r = new RollerCoaster("for(;;) Young", 32, 3.14, 25, 99, 1.618);
-    PneumaticTower p = new PneumaticTower("Power Tower", 5.75, 12, 245, 3.1);
-    */
-
-    Vector<AmusementRide> rides = new Vector<AmusementRide>();
+    Vector<AmusementRide> rides = new Vector<AmusementRide>(); // Declare a vector of rides
 
     rides.addElement(new FerrisWheel("The Billy Preston", 50, 6.28, 100));
     rides.addElement(new RollerCoaster("for(;;) Young", 32, 3.14, 25, 99, 1.618));
