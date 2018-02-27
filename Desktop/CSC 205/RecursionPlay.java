@@ -29,11 +29,11 @@ public class RecursionPlay {
    * contain any repetition control statements
    */
   private static void countdown(int n) {
-    System.out.print(n);
-    if (n > 0)
-      countdown(n - 1);
-    System.out.print("..." + n);
-
+    if (n == 0)
+      System.out.print("BLAST OFF!");
+    else if (n > 0)
+      System.out.print(n + "...");
+    countdown(n - 1);
   }
 
   /*
@@ -53,9 +53,12 @@ public class RecursionPlay {
    * into any type of an object
    */
   private static void reverse_digits(int n) {
-    if (n > 0)
-      reverse_digits(n = n / 2);
-
+    System.out.print(n % 10);
+    if (n / 10 == 0) {
+      return;
+    }
+    reverse_digits(n / 10);
+    return;
   }
 
   /*
