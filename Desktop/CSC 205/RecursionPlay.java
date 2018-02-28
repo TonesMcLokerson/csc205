@@ -1,5 +1,7 @@
 /*
- * This Java application demonstrates recursion.
+ *@creator tmd
+ *@created 02018/02/28
+  This Java application demonstrates recursion through various methods.
  */
 public class RecursionPlay {
   public static void main(String[] argv) {
@@ -10,7 +12,7 @@ public class RecursionPlay {
       reverse_digits(x[i]);
       System.out.println();
     }
-    //System.out.println(sum(x, 0, 0));
+    System.out.println(sum(x, 0, 0));
 
   }
 
@@ -29,11 +31,12 @@ public class RecursionPlay {
    * contain any repetition control statements
    */
   private static void countdown(int n) {
-    if (n == 0)
-      System.out.print("BLAST OFF!");
-    else if (n > 0)
+    if (n == 0) {
+      System.out.print("BLAST OFF!\n");
+    } else {
       System.out.print(n + "...");
-    countdown(n - 1);
+      countdown(n - 1);
+    }
   }
 
   /*
@@ -76,7 +79,12 @@ public class RecursionPlay {
    * and/or their types can be changed, but doing so
    * may require changing the main() method.
    */
-  /*private static long sum(int[] x, int x_i, long total) {
-  }*/
-
+   private static long sum(int[] x, int x_i, long total) {
+     int len = x.length;
+     while(x_i < len) {
+       total = x[x_i];
+        x_i++;
+   }
+       return total;
+    }
 }
